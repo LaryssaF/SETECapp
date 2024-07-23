@@ -1,4 +1,4 @@
-SETEC Event Management App
+# SETEC Event Management App
 Descrição
 Devido ao sucesso da SETEC nos dois últimos anos, identificamos a necessidade de proporcionar aos ouvintes uma forma mais prática de participar do evento. Com a elevada presença de alunos e interessados, surgiram solicitações para melhorar a praticidade na organização e no gerenciamento do cronograma de eventos, palestras e oficinas.
 
