@@ -3,6 +3,7 @@ import 'package:setecapp/tela_cadastro.dart';
 import 'package:setecapp/tela_palestras.dart';
 import 'package:setecapp/tela_pagamento.dart';
 import 'package:setecapp/tela_recuperar_senha.dart';
+import 'package:setecapp/tela_perfil.dart'; 
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'SETEC Event Management',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.grey,
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
           color: Colors.white,
@@ -46,6 +47,95 @@ class _TelaLoginState extends State<TelaLogin> {
     return Scaffold(
       appBar: AppBar(
         title: Text('SETEC Login'),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.green,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage('assets/profile_placeholder.png'), 
+                    backgroundColor: Colors.grey[200],
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Nome do Usuário',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'email@dominio.com', 
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.person_add),
+              title: Text('Cadastro'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TelaLogin()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.event),
+              title: Text('Palestras'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TelaPalestras()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.payment),
+              title: Text('Pagamento'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TelaPagamento()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text('Perfil'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TelaPerfil()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Sair'),
+              onTap: () {
+                Navigator.pop(context); 
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => TelaLogin()),
+                ); 
+              },
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -93,7 +183,7 @@ class _TelaLoginState extends State<TelaLogin> {
                     if (_formKey.currentState!.validate()) {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => TelaPrincipal()),
+                        MaterialPageRoute(builder: (context) => TelaPerfil()), 
                       );
                     }
                   },
@@ -113,7 +203,7 @@ class _TelaLoginState extends State<TelaLogin> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TelaCadastro()),
+                      MaterialPageRoute(builder: (context) => TelaLogin()),
                     );
                   },
                   child: Text('Não tem uma conta? Cadastre-se'),
@@ -122,69 +212,6 @@ class _TelaLoginState extends State<TelaLogin> {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class TelaPrincipal extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SETEC'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.person_add),
-              title: Text('Cadastro'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaCadastro()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.event),
-              title: Text('Palestras'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaPalestras()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.payment),
-              title: Text('Pagamento'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaPagamento()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-      body: Center(
-        child: Text('Bem-vindo ao SETEC'),
       ),
     );
   }
