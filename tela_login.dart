@@ -1,35 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:setecapp/tela_cadastro.dart';
-import 'package:setecapp/tela_palestras.dart';
-import 'package:setecapp/tela_pagamento.dart';
-import 'package:setecapp/tela_recuperar_senha.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'SETEC Event Management',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        scaffoldBackgroundColor: Colors.white,
-        appBarTheme: AppBarTheme(
-          color: Colors.white,
-          iconTheme: IconThemeData(color: Colors.black),
-          titleTextStyle: TextStyle(
-            color: Colors.black,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-      home: TelaLogin(),
-    );
-  }
-}
+import 'tela_cadastro.dart';
+import 'tela_recuperar_senha.dart';
+import 'tela_principal.dart';
 
 class TelaLogin extends StatefulWidget {
   @override
@@ -56,7 +28,7 @@ class _TelaLoginState extends State<TelaLogin> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image.asset(
-                  'assets/logo.png',
+                  'assets/images/logo.png',
                   height: 100,
                 ),
                 SizedBox(height: 20),
@@ -122,69 +94,6 @@ class _TelaLoginState extends State<TelaLogin> {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class TelaPrincipal extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SETEC'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.person_add),
-              title: Text('Cadastro'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaCadastro()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.event),
-              title: Text('Palestras'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaPalestras()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.payment),
-              title: Text('Pagamento'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaPagamento()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-      body: Center(
-        child: Text('Bem-vindo ao SETEC'),
       ),
     );
   }
