@@ -1,24 +1,35 @@
-# SETEC Event Management App
-Descrição
-Devido ao sucesso da SETEC nos dois últimos anos, identificamos a necessidade de proporcionar aos ouvintes uma forma mais prática de participar do evento. Com a elevada presença de alunos e interessados, surgiram solicitações para melhorar a praticidade na organização e no gerenciamento do cronograma de eventos, palestras e oficinas.
+SETECapp – Aplicativo de Gerenciamento de Eventos da SETEC/UPE
+📌 Visão Geral
+Com o crescimento e sucesso da SETEC (Semana da Tecnologia da UPE) nos últimos anos, surgiu a necessidade de tornar a experiência dos participantes mais prática, organizada e acessível. A alta adesão de alunos e público externo evidenciou a importância de uma solução digital que otimize o controle do evento e melhore a comunicação entre todos os envolvidos.
 
-Para resolver esses problemas, estamos desenvolvendo um aplicativo móvel que visa simplificar e otimizar todas as etapas do gerenciamento de eventos da SETEC. As principais funcionalidades do aplicativo incluem:
+Pensando nisso, desenvolvemos o SETECapp, um aplicativo mobile construído com Flutter que visa simplificar e automatizar as principais etapas de organização, inscrição e participação nas atividades da SETEC.
 
-Agendamento de Palestras: Permite aos usuários visualizar e agendar palestras com detalhes claros sobre horários e locais.
-Registro Digital de Presença: Sistema robusto para registro de presença digital e automação no cálculo de horas.
-Venda de Ingressos: Facilita a venda de ingressos de forma segura e eficiente.
-Comunicação Integrada: Promove a comunicação eficaz entre os participantes através de um chat integrado.
-Nosso objetivo é criar uma solução tecnológica que não apenas simplifique a organização de eventos, mas também melhore significativamente a experiência dos participantes, garantindo uma gestão eficiente, participação precisa e interação facilitada.
+🎯 Objetivo
+Oferecer uma solução tecnológica eficiente para:
 
-## Getting Started
+Melhorar a gestão e acompanhamento da programação de palestras, oficinas e demais atividades.
 
-This project is a starting point for a Flutter application.
+Otimizar o registro de presença e cálculo de carga horária dos participantes.
 
-A few resources to get you started if this is your first Flutter project:
+Facilitar a comunicação e a integração entre os participantes.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Tornar o processo de inscrição e aquisição de ingressos mais rápido e seguro.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🚀 Funcionalidades
+🗓️ Agendamento de Palestras
+Visualização da programação completa com horários, locais, temas e palestrantes. Usuários podem favoritar ou agendar as atividades de interesse.
+
+✅ Registro Digital de Presença
+Sistema prático e seguro de confirmação de presença, com controle de carga horária automática.
+
+🎟️ Venda de Ingressos
+Compra de ingressos diretamente pelo app, com geração de comprovantes e integração com o sistema de controle de entrada.
+
+💬 Comunicação Integrada
+Chat interno para facilitar o contato entre participantes, palestrantes e organizadores.
+
+🛠️ Tecnologias Utilizadas
+Linguagem: Dart
+
+Framework: Flutter
+
